@@ -1,0 +1,54 @@
+         /*
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        */
+
+        html{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        p{
+            color: red;
+            text-align: center;
+        }
+
+        #para1{
+            font-size: 40px;
+        }
+
+        .seleccionado{
+            color: green;
+            font-size: 30px;
+            text-align: center;
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        .titulo{
+            font-size: 100px;
+        }
+
+        h1, p{
+            background-color: aqua;
+        }
+
+        div + p{
+            background-color: yellow;
+            border: ;
+            margin-bottom: 300px;
+        }
+
+        p ~ ul{
+            background-color: black;
+            color: white;
+        }
+
+        /* university link */
+        a: link{
+            colo
+        }

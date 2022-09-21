@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <h1>Formulario:</h1>
+
+    <form action="enviar.html" method="get">
+        <label for="nombre">Nombre:</label>
+        <br>
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+        <label for="apellido">Apellido:</label>
+        <br>
+        <input type="text" id="apellido" name="apellido">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <fieldset>
+        <form name="forma2" action="enviar2.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <br>
+            <input type="text" id="nombre2" required name="nombre2" placeholder="Ingresa tu nombre">
+            <br><br>
+            <label for="correo">Correo:</label>
+            <br>
+            <input type="email" id="correo" name="correo">
+            <br><br>
+            <label for="edad">Edad:</label>
+            <br>
+            <input type="number" step="any" name="edad" id="edad">
+            <br><br>
+            <label for="lenguaje">Selecciona un lenguaje</label>
+            <br>
+            <input type="radio" name="lenguaje" id="js">JavaScript
+            <input type="radio" name="lenguaje" id="py">Python
+            <input type="radio" name="lenguaje" id="c">C
+            <br><br>
+            <label for="paises">¿Qué países has visitado?</label>
+            <br>
+            <input type="checkbox" name="paises" id="EU">Estados Unidos
+            <input type="checkbox" name="paises" id="CA">Canadá
+            <br><br>
+            <label for="mensaje">Ingresa un comentario:</label>
+            <textarea style="width: 100%; height: 50px;" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            <br><br>
+            <label for="autos">Selecciona un auto:</label>
+            <br>
+            <select name="autos" id="autos">
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="VW">VW</option>
+            </select>
+            <br><br>
+            <label for="navegadores">Selecciona tu navegador favorito</label>
+            <br>
+            <input list="navegadores">
+                <datalist id="navegadores">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
+    <form name="forma3" action="">
+        <label for="favcolor">Color favorito:</label>
+        <input type="color" id="favcolor" name="favcolor">
+        <br><br>
+        <label for="nac">Fecha de nacimiento:</label>
+        <input type="date" id="nac" name="nac">
+        <br><br>
+        <label for="viaje">Horario de partida:</label>
+        <input type="datetime-local" id="viaje" name="viaje">
+        <br><br>
+        <label for="archivo">Sube tu foto:</label>
+        <input type="file" id="archivo" name="archivo">
+        <input type="hidden" id="identificador" name="identificador" value="1234">
+        <br><br>
+        <label for="cantidad">Cantidad (entre 1 y 5):</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="5">
+        <br><br>
+        <label for="vol">Volumen (entre 0 and 100):</label>
+        <input type="range" id="vol" name="vol" min="0" max="100">
+        <br><br>
+        <label for="celular">Teléfono:</label>
+        <input type="tel" id="celular" name="celular" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" placeholder="477 123-4567">
+        <br><br>
+        <label for="hora">Seleccione una hora:</label>
+        <input type="time" id="hora" name="hora">
+        <br><br>
+        <label for="pagina">Agrega una URL:</label>
+        <input type="url" id="pagina" name="pagina">
+        <br><br>
+        <label for="semana">Selecciona una semana:</label>
+        <input type="week" id="semana" name="semana">
+        <br><br>
+        <input type="image" src="https://www.w3schools.com/html/img_submit.gif" alt="Submit" width="48" height="48">
+        <br><br>
+        <input type="submit" value="Enviar">
+        <br><br>
+        <input type="reset">
+    </form>
+</body>
+</html>
