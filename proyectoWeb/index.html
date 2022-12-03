@@ -98,41 +98,14 @@
             </div>
         </div>
     </div>
-<!--
-    <div class="container-fluid col-md-12 pt-5" style="background-color:#e5e5e561;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <h1 class="text-center">Misión</h1>
-                    <p>Nuestro proposito: Llevar la tecnología a cada rincón de cada tipo de empresa, así como el mejor servicio y la mayor atención, calidad e innovación.</p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <h1 class="text-center">Visión</h1>
-                    <p>Proveerle al usuario la mayor facilidad de uso, así como la mejor adaptabilidad y responsividad en todos los proyectos, creando excelentes proyectos por medio del excelente manejo de las tecnologías ofrecidas.</p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <h1 class="text-center">Valores</h1>
-                    <ul>
-                        <li>Aprendizaje</li>
-                        <li>Seguridad</li>
-                        <li>Creatividad</li>
-                        <li>Innovación</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 
     <div class="container-fluid " id="servicios">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mt-5 mb-2">
-                    <!--
                     <div class="alert alert-success" role="alert">
-                        ¡Oferta por inauguración! La consulta estará al 50% de descuento hasta el 7/Noviembre/2022
+                        Consulta nuestras ofertas de nuestros servicios por tiempo limitado.
                     </div>
-                    -->
                     <h1>Nuestros paquetes</h1>
                 </div>
             </div>
@@ -140,9 +113,9 @@
         <div class="row" data-aos="flip-down">
             <div class="col-12 col-md-4 px-5 d-flex align-items-center justify-content-center text-center">
                 <div class="plan-card shadow">
-                    <h2>Página web básica<span class="mt-2"><!--Menos de 50 empleados--></span></h2>
+                    <h2>Página web básica<span class="mt-2"></span></h2>
                     <div class="etiquet-price">
-                        <p>$249 UDS</p>
+                        <p>$4,499 MXN</p>
                     </div>
                     <div class="benefits-list">
                         <ul>
@@ -177,9 +150,9 @@
 
             <div class="col-12 col-md-4 px-5 py-5 d-flex align-items-center justify-content-center text-center">
                 <div class="plan-card shadow">
-                    <h2>Página web intermedia<span class="mt-2"><!--Hasta 500 empleados--></span></h2>
+                    <h2>Página web intermedia<span class="mt-2"></span></h2>
                     <div class="etiquet-price">
-                        <p> $499 USD</p>
+                        <p> $9,499 MXN</p>
                     </div>
                     <div class="benefits-list">
                         <ul>
@@ -214,9 +187,9 @@
 
             <div class="col-12 col-md-4 px-5 d-flex align-items-center justify-content-center text-center">
                 <div class="plan-card shadow">
-                    <h2>Página web avanzada<span class="mt-2"><!--+500 empleados--></span></h2>
+                    <h2>Página web avanzada<span class="mt-2"></span></h2>
                     <div class="etiquet-price">
-                        <p>$899 USD</p>
+                        <p>$17,499 MXN</p>
                     </div>
                     <div class="benefits-list">
                         <ul>
@@ -254,14 +227,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5 text-center">
-                    <h1>Trabajamos con</h1>
+                    <h1>Ejemplos de nuestros productos</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="text-center">
-                    <img src="imagenes/HTML_CSS.png" class="img-fluid w-50" alt="">
-                </div>
-            </div>
+            <div id="productos"></div>
+            <script>
+                var paquetes = document.getElementById("paquetes");
+                fetch("datos.json")
+                .then(Response => {
+                    Response.json().then(datos => {
+                        datos.forEach(registro => {
+                            let nombre = document.createElement("p");
+                            nombre.textContent = "Página: " + registro.desing + ", id: " + registro.id;
+                            productos.appendChild(nombre);
+
+                            let imagen = document.createElement("img");
+                            imagen.setAttribute("src", "imagenes/" + registro.desing + ".webp");
+                            productos.appendChild(imagen);
+                        });
+                    })
+                })
+            </script>
         </div>
     </div>
 
