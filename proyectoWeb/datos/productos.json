@@ -1,0 +1,10 @@
+[{
+    "nombre": "Página web básica",
+    "caracteristicas": "Diseño sencillo, Logotipo Datos de la empresa Liga a redes sociales"
+}, {
+    "nombre": "Página web intermedia",
+    "caracteristicas": "Paquete básico, Diseño intermedio, Diferentes secciones, Mapa de ubicación"
+}, {
+    "nombre": "Página web avanzada",
+    "caracteristicas": "Paquete intermedio, Diseño avanzado, Mantenimiento, Animaciones"
+}]

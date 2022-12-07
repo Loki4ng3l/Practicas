@@ -227,30 +227,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5 text-center">
-                    <h1>Ejemplos de nuestros productos</h1>
+                    <h1>Trabajamos con</h1>
                 </div>
             </div>
-            <div id="productos"></div>
-            <script>
-                var paquetes = document.getElementById("paquetes");
-                fetch("datos.json")
-                .then(Response => {
-                    Response.json().then(datos => {
-                        datos.forEach(registro => {
-                            let nombre = document.createElement("p");
-                            nombre.textContent = "Página: " + registro.desing + ", id: " + registro.id;
-                            productos.appendChild(nombre);
-
-                            let imagen = document.createElement("img");
-                            imagen.setAttribute("src", "imagenes/" + registro.desing + ".webp");
-                            productos.appendChild(imagen);
-                        });
-                    })
-                })
-            </script>
+            <div class="row">
+                <div class="text-center">
+                    <img src="imagenes/HTML_CSS.png" class="img-fluid w-50" alt="">
+                </div>
+            </div>
         </div>
     </div>
 
+    <div class="container-fluid py-2 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Prodcutos dinámicos</h1><br>
+                </div>
+            </div>
+            <div class="row">
+                <p id="productosdinamicos"></p>
+            </div>
+        </div>
+    </div>
+    
     <form name="formacontacto" id="formacontacto">
         <fieldset>
             <div class="py-4"></div>
@@ -358,6 +358,32 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        let productosdinamicos = document.getElementById("productosdinamicos");
+        fetch("datos/productos.json")
+        .then(Response => {
+            Response.json().then(datos => {
+                datos.forEach(registro => {
+
+                    let columna = document.createElement("div");
+                    columna.className = "col-12 col-md-4 p-4";
+
+                    let nombre = document.createElement("h2");
+                    nombre.className = "text-center";
+                    nombre.innerHTML = registro.nombre;
+
+                    let caracteristicas = document.createElement("h5");
+                    caracteristicas.className = "card-title text-secondary text-center";
+                    caracteristicas.innerHTML = registro.caracteristicas;
+
+                    productosdinamicos.appendChild(columna);
+                    columna.appendChild(nombre);
+                    columna.appendChild(caracteristicas);
+                });
+            })
+        })
     </script>
 </body>
 </html>
